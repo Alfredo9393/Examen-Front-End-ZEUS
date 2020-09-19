@@ -1,0 +1,32 @@
+<app-tile-h2 [text] ="'Nuevo empleado'" ></app-tile-h2>
+
+<div class="employeed-new">
+    <form [formGroup]="formEmployee" style="margin-left: 20%;margin-right: 20%;color: white;" >
+        <span>Nombre</span>
+        <input 
+            [class.is-invalid] ="formEmployee.get('name').touched && formEmployee.get('name').invalid"
+            type="text" 
+            class="form-control" 
+            formControlName="name" 
+        />
+        <span>Apellido</span>
+        <input 
+            [class.is-invalid] ="formEmployee.get('last_name').touched && formEmployee.get('last_name').invalid"
+            type="text" 
+            class="form-control" 
+            formControlName="last_name" 
+        />
+        <span>Fecha de Nacimiento</span>
+        <input 
+            [class.is-invalid] ="formEmployee.get('birthday').touched && formEmployee.get('birthday').invalid"
+            type="text" 
+            class="form-control" 
+            formControlName="birthday" 
+            placeholder="YYYY/MM/DD"
+        />
+        <br>
+        <button class="btn btn-primary" type="submit" (click) = "save()">Guardar </button>
+    </form>
+  
+</div>
+

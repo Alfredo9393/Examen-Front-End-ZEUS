@@ -1,0 +1,63 @@
+<app-tile-h2 [text] ="'Grupos'" ></app-tile-h2>
+  <div class="goups">
+    <div class="col-lg-12"></div>
+      <div cdkDropListGroup  >
+
+        <div class="row" >
+          <div class="col"  >
+          
+            <div class="container" >
+              <div class="row">
+                <div class="col-12" style="background-color: rgb(60 92 141);margin-bottom: 15px;">
+                    <h5 style="color: white;" >Groups</h5>
+                </div>
+                <br>
+                <div class="col-7" style="margin-bottom: 15px">
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Buscar"
+                    [(ngModel)]="nameGroup"
+                    (keyup)="filterItem($event)"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              cdkDropListOrientation="horizontal"
+              cdkDropList
+              disabled="true"
+              [cdkDropListData]="dataGroupsAll"
+              listAutoScrollDisabled="true"
+              class="group-list"
+              (cdkDropListDropped)="drop($event)">
+              <div class="groups-employees" *ngFor="let item of dataGroupsAll" cdkDrag>{{item.name}}</div>
+            </div>
+          </div>
+        
+          <div class="col overflow-auto" style="height:500px;" >
+              <h2 style="color: white;" ></h2>
+              <div
+                cdkDropList
+                [cdkDropListData]="dataGroups"
+                cdkDropListSortingDisabled
+                class="group-list"
+                (cdkDropListDropped)="drop($event)">
+                <app-groups-employees 
+                  class="groups-employees" 
+                  *ngFor="let item of dataGroups"  
+                  [item] ="item" 
+                  (event)="removed($event)"   
+                  (eventUpdateData)="eventUpdateData($event)"   
+                  cdkDrag
+                >  
+                </app-groups-employees>
+                  
+                <button type="button" class="btn btn-info pull-right" (click) = "next_()"  >Continuar -></button>
+              </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
