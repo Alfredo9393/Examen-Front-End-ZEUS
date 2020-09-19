@@ -5,7 +5,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:1,
         title:{
             first:'Foto 1:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
@@ -15,7 +15,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:2,
         title:{
             first:'Foto 2:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
@@ -25,7 +25,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:3,
         title:{
             first:'Foto 3:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
@@ -35,7 +35,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:4,
         title:{
             first:'Foto 4:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
@@ -45,7 +45,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:5,
         title:{
             first:'Foto 5:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
@@ -55,7 +55,7 @@ export const dummy_data:ICarouselIem[]  =[
         id:6,
         title:{
             first:'Foto 6:',
-            second:'Monterrey'
+            second:'Mty'
         },
         subtitle:'Nuevo Leon',
         link:'/',
